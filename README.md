@@ -19,11 +19,12 @@ is **NOT Waggster-compatible as shipped.** Its `Configuration.h` leaves
 contradict: Marlin reads the probe on **Z-MIN**, not the **Z-MAX/pin-19** port the
 Waggster mod wires to. Flashed as-is, the probe would never be seen.
 
-**Use instead** (see [docs/decisions.md](docs/decisions.md)):
-1. `firmware/reference--digant73-2.0.9.1-waggster-zmax/firmware.hex` — correct out of the
-   box (X1 bed, UBL 7×7, Z-MAX pin 19), **or**
-2. dgtaheno `-X1-BLT` source with **line 1279 commented out**, recompiled (for Marlin
-   2.1.2.1 + exact 300×310 geometry).
+**Flash instead — both ready now** (see [docs/install-runbook.md](docs/install-runbook.md)):
+1. ★ **`firmware/build--X1-BLT-2.1.2.1-waggster-fixed/Marlin-2.1.2.1-X1-BLT-waggster-fixed.hex`**
+   — dgtaheno's X1-BLT **rebuilt this session with the probe fix** (line 1279 commented →
+   probe on Z-MAX/pin 19). Marlin 2.1.2.1, exact X1 geometry, compiled clean & verified. **or**
+2. `firmware/reference--digant73-2.0.9.1-waggster-zmax/firmware.hex` — prebuilt, correct out
+   of the box (UBL 7×7 — better for a heavily warped bed).
 
 Then **verify on hardware** (`M119` probe toggle, `G29`) before trusting it.
 
@@ -54,9 +55,11 @@ docs/
   configuration-diff.md        8-build comparison matrix + customizations ★
   open-questions.md            Q1/Q2/Q3 answered + remaining hardware items
   decisions.md                 decisions + rationale
+  install-runbook.md           ★ flash-day step-by-step: wire → flash → verify → calibrate
 firmware/
   running--dgtaheno-X1-nonBLT/      what's on the printer now (hex + headers)
-  target--dgtaheno-X1-BLT/          planned build (⚠ needs the 1-line probe fix)
+  target--dgtaheno-X1-BLT/          as-shipped (⚠ probe forced to Z-MIN — do not flash)
+  build--X1-BLT-2.1.2.1-waggster-fixed/  ★ recommended flash: X1-BLT rebuilt w/ probe fix
   reference--dgtaheno-Genius-BLT/   correct z-max routing but Genius bed (220²)
   reference--digant73-2.0.9.1-waggster-zmax/  ★ correct Waggster build (source+hex+pins)
   reference--digant73-2.0.9.1-mbl/  manual-mesh reference
@@ -74,6 +77,7 @@ archive/
 ★ = start here.
 
 ## Next actions (in order)
+> Flash-day checklist with exact commands: **[docs/install-runbook.md](docs/install-runbook.md)**.
 1. Print Waggster mount (PETG); test-fit against the stock fan duct.
 2. Wire the BLTouch per [wiring/README.md](wiring/README.md) (probe → Z-MAX/pin 19).
 3. Flash a **correct** Waggster build (see Headline finding). Run the EEPROM reset

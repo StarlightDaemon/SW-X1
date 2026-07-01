@@ -10,7 +10,8 @@
 | Folder | What it is | Hardware fit |
 |---|---|---|
 | `running--dgtaheno-X1-nonBLT/` | **Exactly what is on the printer now.** `Marlin 2.1.2.1-X1.hex` + its config headers. No leveling, no probe (confirmed by `M115` on hardware). | X1 (300×300×400) ✓ |
-| `target--dgtaheno-X1-BLT/` | The BLTouch build the user planned to flash. `Marlin 2.1.2.1-X1-BLT.hex` + config headers. **See verification-log: its probe-pin config is NOT cleanly Waggster-compatible as shipped.** | X1 ✓ |
+| `target--dgtaheno-X1-BLT/` | The BLTouch build the user planned to flash. `Marlin 2.1.2.1-X1-BLT.hex` + config headers. **NOT cleanly Waggster-compatible as shipped** (probe forced to Z-MIN). | X1 ✓ |
+| `build--X1-BLT-2.1.2.1-waggster-fixed/` | ★ **The recommended flash.** dgtaheno X1-BLT **rebuilt this session with the probe fix** (line 1279 commented → probe on Z-MAX/pin 19). Compiled clean for mega2560. See its `BUILD.md`. | X1 ✓ |
 | `reference--dgtaheno-Genius-BLT/` | `_BLT` + `_BLT-295C` (Genius line). The `_BLT` config has the *correct* Z-max/Waggster probe-pin setup — but **Genius** bed geometry, not X1. | Genius (220×220) ✗ for X1 |
 | `reference--digant73-2.0.9.1-waggster-zmax/` | **Canonical correct Waggster config** (full source: Configuration.h/_adv.h, Version.h, pins_RAMPS.h) + firmware.hex + readme/changes + cabling PDF. Older Marlin (2.0.9.1). | X1 ✓ |
 | `reference--digant73-2.0.9.1-mbl/` | Manual mesh-bed-leveling reference config + hex. | X1 ✓ |
@@ -21,7 +22,8 @@
 | File | MD5 | Bytes |
 |---|---|---|
 | running `Marlin 2.1.2.1-X1.hex` | `03a6b3ab03f902d3f291fe2632c2f625` | 282 356 |
-| target `Marlin 2.1.2.1-X1-BLT.hex` | `01682ba04e424cc7f248516d22171a32` | 326 072 |
+| target `Marlin 2.1.2.1-X1-BLT.hex` (buggy, as-shipped) | `01682ba04e424cc7f248516d22171a32` | 326 072 |
+| **built** `…-X1-BLT-waggster-fixed.hex` (fixed, flash this) | `ddde4fc3f13dee23b9e6bad17e3bb845` | 326 346 |
 | Genius `Marlin 2.1.2.1_BLT.hex` | `e15b19272bf80974d0ac603637631600` | 364 019 |
 | Genius `Marlin 2.1.2.1_BLT-295C.hex` | `48e8630f788ac133769806b1f54a3b34` | 326 068 |
 | digant73 waggster `firmware.hex` | `9ccdb52de85ebf6e9297d280aca5eb6c` | — |

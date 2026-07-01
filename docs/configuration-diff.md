@@ -49,6 +49,10 @@ Relative to `artillery3d-stock`, the dgtaheno X1 builds change:
   actual printed BLTouch mount.
 
 ## Build the corrected X1 Waggster firmware (recommended recipe)
+> ✅ **Path 2 below has already been built and verified this session** —
+> `firmware/build--X1-BLT-2.1.2.1-waggster-fixed/Marlin-2.1.2.1-X1-BLT-waggster-fixed.hex`
+> (see its `BUILD.md`). The recipe is kept here for reproducibility.
+
 Two viable paths — see [decisions.md](decisions.md) for why:
 1. **Flash digant73 `waggster_z_max` `firmware.hex` directly** (already correct: X1 bed
    305×305×400, UBL 7×7, Z-MAX pin 19, offset {33,-33,0}). Older Marlin 2.0.9.1 — fine for
