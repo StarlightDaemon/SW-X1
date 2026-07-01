@@ -1,5 +1,10 @@
 # Printed parts
 
+> **BLTouch mount + airflow:** see **[BLTOUCH-MOUNT-OPTIONS.md](BLTOUCH-MOUNT-OPTIONS.md)**
+> for the researched + browser-verified recommendation (integrated blinkybill part
+> thing:4606514, or Waggster mount + alguiens Futuristic duct thing:4368198) and the
+> print-shop spec. That doc supersedes the older bare-mount + separate-duct split below.
+
 | Folder | File present | Source | Print notes |
 |---|---|---|---|
 | `waggster-bltouch-mount/` | `SWX1-BLT-Bracket.stl` (collected, from digant73 repo) | see `waggster-bltouch-mount/SOURCE.md` | **PETG recommended** — mount sits near the hotend; PLA can deform. |
