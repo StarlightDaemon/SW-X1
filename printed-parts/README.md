@@ -7,8 +7,9 @@
 
 | Folder | File present | Source | Print notes |
 |---|---|---|---|
-| `waggster-bltouch-mount/` | `SWX1-BLT-Bracket.stl` (collected, from digant73 repo) | see `waggster-bltouch-mount/SOURCE.md` | **PETG recommended** — mount sits near the hotend; PLA can deform. |
-| `fan-duct-remix/` | *link only* (host blocks auto-download) | see `fan-duct-remix/SOURCE.md` | Contingency duct if the mount fouls the stock part-cooling duct. |
+| `waggster-bltouch-mount-duct/` | blinkybill integrated **mount+duct** STLs (thing:4606514) | **Option A** | ★ single-piece mount+duct+BLTouch. PETG. |
+| `waggster-bltouch-mount/` | Waggster originals + `SWX1-BLT-Bracket.stl` (digant73) | thing:3716043 + digant73 | Mount-only (pair with a duct for Option B). PETG. |
+| `fan-duct-remix/` | alguiens **Futuristic** + **~180** ducts (thing:4368198 / 4360786) | **Option B** duct | Best cooling; pair with a Waggster mount. ⚠ CC BY-NC. |
 | `gantry-square/` | `Gantry Square.STL` | peterrakolcza repo | Gantry-squaring jig. |
 | `brackets/` | `Brackets.zip` | peterrakolcza repo | Misc upgrade brackets. |
 

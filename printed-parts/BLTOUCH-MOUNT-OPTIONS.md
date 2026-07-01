@@ -74,10 +74,24 @@ lower-effort single print. Decide duct-to-nozzle adequacy after install (see cav
 - **Stock 4020 fan** — these use the stock fan; only the (not-recommended) Dual-5015 designs
   need added blowers.
 
-## Acquisition status
-The integrated file (`Fan_Mount_With_Duct_And_BL-Touch.stl`, thing:4606514) was **triggered
-to download to the operator's ~/Downloads** during verification. It could not be pulled
-directly into this repo (macOS blocks tool access to ~/Downloads, and Thingiverse exposes
-no anonymous file URL). To vendor it here, move the downloaded STL into
-`printed-parts/waggster-bltouch-mount-duct/`; otherwise hand the file (or the thing:4606514
-/ thing:4368198 links) straight to the print shop.
+## Acquisition status — ✅ all vendored locally (2026-06-30)
+Every option's STL was pulled into this repo (verified valid binary STL, not HTML) via the
+logged-in Thingiverse session. Nothing is link-only anymore.
+
+| File (folder) | Thing | MD5 |
+|---|---|---|
+| `waggster-bltouch-mount-duct/Fan_Mount_With_Duct_And_BL-Touch.stl` | 4606514 | `5924d941e900916c538a2acee33f80c2` |
+| `waggster-bltouch-mount-duct/Fan_Mount_With_Duct_No_BL-Touch.stl` | 4606514 | `e2a4fb5d11cefebc35700881ba442b4e` |
+| `waggster-bltouch-mount-duct/BLTouch_Mount_Slider.stl` | 4606514 | `50ba49ef68e507ace12434a9197aed1c` |
+| `fan-duct-remix/Artillery_Sidewinder_X1_Futuristic_fan_duct_for_BLTouch_mount.stl` | 4368198 | `2526bbb7daa2e1402ca6a950efd6f744` |
+| `fan-duct-remix/Sidewinder_X1_Waggster_mod_BLtouch_fan_duct.stl` | 4360786 | `6ff7aec8a6e52e986150118c7e42a8ea` |
+| `waggster-bltouch-mount/BLTouch_Mount_Adjustable.stl` | 3716043 | `384eb396c072f1fa33f8294ee7064e85` |
+| `waggster-bltouch-mount/BLTouch_Mount_Slider.stl` | 3716043 | `50ba49ef68e507ace12434a9197aed1c` |
+| `waggster-bltouch-mount/BLTouch_Calibration.stl` | 3716043 | `70756995821e21ca327f15e080605a21` |
+| `waggster-bltouch-mount/SWX1-BLT-Bracket.stl` | digant73 repo | `e66f420a411adb69212e629429752aa1` |
+
+**Licensing (important for a paid/commercial print shop):** the **alguiens** ducts
+(thing:4368198, 4360786) are **CC BY-NC** — non-commercial. The blinkybill (4606514) and
+Waggster (3716043) parts: verify the license on their Thingiverse page before a commercial
+run. The 3DPrintBeginner combined part is not vendored (Printables/MakerWorld login-walled).
+

@@ -12,6 +12,10 @@ upstream GitHub repo's future activity.
 
 ---
 
+## ▶ Start here
+**[docs/GUIDE.md](docs/GUIDE.md)** — the ordered end-to-end build guide (parts → print →
+wire → flash → verify → calibrate → map the warp). Everything below is reference for it.
+
 ## ⚠️ Headline finding (read before flashing anything)
 The BLTouch build the project planned to flash — dgtaheno **`Marlin 2.1.2.1-X1-BLT.hex`** —
 is **NOT Waggster-compatible as shipped.** Its `Configuration.h` leaves
@@ -49,6 +53,7 @@ ordered. Mount in PETG; fan-duct remix on standby. Wiring: [wiring/README.md](wi
 ```
 README.md                     ← you are here
 docs/
+  GUIDE.md                     ★ master ordered build guide — start here
   hardware-baseline.md         canonical hardware facts (do not re-derive)
   calibration-baseline.md      live PID / e-steps + host connection notes
   verification-log.md          M115 ground truth + source-inspection proofs ★
@@ -67,7 +72,9 @@ firmware/
   reference--artillery3d-stock/     manufacturer stock reference
   NOTES.md                          firmware map + MD5 fingerprints
 tft-firmware/                  matching dgtaheno TFT update + a BTT-based option
-printed-parts/                 Waggster mount (collected) + duct/gantry/brackets
+printed-parts/                 mount+duct STLs (all vendored) — see BLTOUCH-MOUNT-OPTIONS.md
+  waggster-bltouch-mount-duct/   Option A: blinkybill integrated mount+duct
+  waggster-bltouch-mount/ + fan-duct-remix/  Option B: Waggster mount + alguiens duct
 wiring/                        Waggster Mod - BLTouch v1.5.pdf + pin-mapping notes
 calibration/                   Reset Settings.gcode (EEPROM reset)
 archive/
