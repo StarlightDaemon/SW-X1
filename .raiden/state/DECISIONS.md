@@ -2,8 +2,8 @@
 
 ## D-001 — Re-author pre-install commits to the fleet git identity (2026-07-08)
 
-**Decision:** SW-X1's 4 pre-RAIDEN commits (originally authored as
-`[redacted identity]`) were rewritten to
+**Decision:** SW-X1's 4 pre-RAIDEN commits (originally authored under
+the operator's prior personal identity (redacted 2026-07-09)) were rewritten to
 `StarlightDaemon <23347919+StarlightDaemon@users.noreply.github.com>`, matching
 every other Instance in the fleet.
 
