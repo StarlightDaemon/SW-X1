@@ -5,6 +5,7 @@ Work must be executed one loop at a time.
 ## LOOP-001: BLTouch mechanical install + firmware flash + verification
 
 - Status: open
+- Gate: hardware
 - Scope: complete `docs/GUIDE.md` Phases 1-4 — mount the BLTouch, wire per
   the Waggster PDF, flash `firmware/build--X1-BLT-2.1.2.1-waggster-fixed/`,
   and run the Phase 3 verification gate (`M115` capability flags, boot
@@ -19,6 +20,7 @@ Work must be executed one loop at a time.
 ## LOOP-002: bed warp mapping + calibration
 
 - Status: open
+- Gate: none
 - Scope: Phase 5 of `docs/GUIDE.md` — map the bed warp and calibrate. Not to
   be started before Phase 3's verification gate passes.
 - Readiness: blocked on LOOP-001.
