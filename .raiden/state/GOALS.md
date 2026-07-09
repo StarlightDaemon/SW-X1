@@ -28,5 +28,5 @@ filename, README, or changelog. See `docs/verification-log.md`.
 
 ## Provenance
 
-RAIDEN Instance installed 2026-07-08 (Edict v1.0.0). Goals captured from
+RAIDEN Instance installed 2026-07-08. Goals captured from
 `README.md` and `docs/GUIDE.md` at install time.

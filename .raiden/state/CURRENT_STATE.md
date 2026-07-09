@@ -15,9 +15,9 @@
   own session and is the one to flash.
 - Confirmed: bed warp is still unmeasured — deliberately deferred to Phase 5,
   not before.
-- Confirmed: RAIDEN Instance installed 2026-07-08 at Edict v1.0.0. Repo now
+- Confirmed: RAIDEN Instance installed 2026-07-08. Repo now
   has a GitHub remote (`StarlightDaemon/SW-X1`, public) as of this install —
-  see `RAIDEN-ops/logs/DISTRIBUTION_LOG.md` and `LOOP-0021`. The 4 pre-install
+  see `RAIDEN-ops/logs/DISTRIBUTION_LOG.md` and `Raiden-ops:LOOP-0021`. The 4 pre-install
   commits were re-authored from the operator's personal git identity to the
   `StarlightDaemon` fleet identity as part of this install (GitHub blocked
   the initial push over the private-email policy); no content changed.
@@ -32,8 +32,8 @@
 
 ## Provenance
 
-- RAIDEN Instance installed 2026-07-08 (Edict v1.0.0), following the scan and
-  install recorded under LOOP-0021 in RAIDEN-ops.
+- RAIDEN Instance installed 2026-07-08, following the scan and
+  install recorded under `Raiden-ops:LOOP-0021`.
 - State captured from `README.md` and `docs/GUIDE.md` at install time — not
   migrated from a prior ledger (this is the project's first RAIDEN state
   record).
