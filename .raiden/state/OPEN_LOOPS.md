@@ -20,7 +20,7 @@ Work must be executed one loop at a time.
 ## LOOP-002: bed warp mapping + calibration
 
 - Status: open
-- Gate: none
+- Gate: hardware
 - Scope: Phase 5 of `docs/GUIDE.md` — map the bed warp and calibrate. Not to
   be started before Phase 3's verification gate passes.
 - Readiness: blocked on LOOP-001.
