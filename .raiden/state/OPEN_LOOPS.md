@@ -1,10 +1,17 @@
 # Open Loops
 
+<!-- Statuses: open · deferred · held: <who> · no-action · accepted · closed. Each active item: ID, status, gate owner, next step or restart condition, evidence. IDs never change or get reused. Entries below stay in their original order. -->
+
 Work must be executed one loop at a time.
+
+## Active
+
+- **LOOP-001 · held: owner · gate: hardware** · BLTouch install, firmware flash and verification (`docs/GUIDE.md` Phases 1–4). Restarts when: the BLTouch v3.1 sensor and cable arrive. Closes when `M119` toggles live and `G29` runs.
+- **LOOP-002 · held: owner · gate: hardware** · Bed warp mapping and calibration (Phase 5). Restarts when: LOOP-001 closes.
 
 ## LOOP-001: BLTouch mechanical install + firmware flash + verification
 
-- Status: open
+- Status: held: owner (hardware work; waiting on parts)
 - Gate: hardware
 - Scope: complete `docs/GUIDE.md` Phases 1-4 — mount the BLTouch, wire per
   the Waggster PDF, flash `firmware/build--X1-BLT-2.1.2.1-waggster-fixed/`,
@@ -19,7 +26,7 @@ Work must be executed one loop at a time.
 
 ## LOOP-002: bed warp mapping + calibration
 
-- Status: open
+- Status: held: owner (hardware work; after LOOP-001)
 - Gate: hardware
 - Scope: Phase 5 of `docs/GUIDE.md` — map the bed warp and calibrate. Not to
   be started before Phase 3's verification gate passes.
