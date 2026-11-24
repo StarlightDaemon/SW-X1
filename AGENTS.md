@@ -24,7 +24,7 @@ There's no build or test suite. Changes are documentation, firmware configuratio
 - Don't change upstream copies in `firmware/reference--…`, `archive/` or `tft-firmware/`; they're backups. Record new findings in `docs/verification-log.md` or `docs/decisions.md`.
 - Main branch is `main`. Agent work goes on `<agent>/<task>` branches in their own worktrees. Ask the owner before pushing.
 - No `Co-Authored-By` or other agent attribution lines in commits; the `commit-msg` hook enforces this. Never bypass it.
-- Local audit reports in `.audits/` are untracked and not yet gitignored: don't commit them.
+- Local audit reports in `.audits/` are gitignored; never commit them.
 - Don't edit `.raiden/writ/` or `.raiden/instance/`. They're historical RAIDEN v2 text kept for the old tooling. Where they, `.raiden/README.md` or `.raiden/local/` disagree with this file, this file wins.
 
 ## Project records
