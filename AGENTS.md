@@ -22,7 +22,7 @@ There's no build or test suite. Changes are documentation, firmware configuratio
 - **Never talk to the printer.** Don't open its serial port, send G-code, flash firmware or write to its SD card or TFT. Hardware work is the owner's, done by hand following `docs/GUIDE.md`.
 - The firmware to flash is `firmware/build--X1-BLT-2.1.2.1-waggster-fixed/` (or the prebuilt `reference--digant73-2.0.9.1-waggster-zmax/`). The dgtaheno `X1-BLT` build as shipped is **not** Waggster-compatible.
 - Don't change upstream copies in `firmware/reference--…`, `archive/` or `tft-firmware/`; they're backups. Record new findings in `docs/verification-log.md` or `docs/decisions.md`.
-- Main branch is `main`. Agent work goes on `<agent>/<task>` branches in their own worktrees. Ask the owner before pushing.
+- Main branch is `main`. Agent work goes on `<agent>/<task>` branches in their own worktrees. See Standing delegation v1 in AGENTS.md.
 - No `Co-Authored-By` or other agent attribution lines in commits; the `commit-msg` hook enforces this. Never bypass it.
 - Local audit reports in `.audits/` are gitignored; never commit them.
 - Don't edit `.raiden/writ/` or `.raiden/instance/`. They're historical RAIDEN v2 text kept for the old tooling. Where they, `.raiden/README.md` or `.raiden/local/` disagree with this file, this file wins.
@@ -43,3 +43,34 @@ Update `CURRENT_STATE.md` and `OPEN_LOOPS.md` when you finish or pause work. Kee
 One agent per worktree. Before starting, read the Claims section of `../../HANDOFF.md` (the workspace folder two levels above the repo or worktree root, outside Git, so every worktree sees the same file) and `git worktree list`, then add your claim line there; mark it done when you finish. Separate tasks may run in parallel only when both claims are listed there and they don't touch the same files. The owner (or the agent they assign) merges branches and updates `.raiden/state/`. The hook and Git config are one-at-a-time work.
 
 This repository is public: don't commit personal names, absolute local paths or details of the owner's private tooling.
+
+## Standing delegation v1 (operator: StarlightDaemon)
+Applies to every agent working in this repo: Claude Code, Codex, Gemini CLI.
+
+Do without asking, then report once at the end of the task:
+- Read, build, test, lint. Wait for CI yourself; don't hand back "pending".
+- Create agent branches (claude/*, codex/*, gemini/*); commit, rebase,
+  fast-forward and merge them. Create agent worktrees.
+- Push agent branches (never force). Open and update PRs; enable auto-fix.
+- Merge a PR into the default branch when all checks pass, no review
+  requests changes, and the merge doesn't publish (see Publication surface).
+- Delete agent branches, local and remote, once their commits are in the
+  default branch or another pushed branch.
+- Keep records current: HANDOFF, OPEN-LOOPS, CHANGELOG and any doc that
+  describes branch or PR state.
+
+Ask once, in one message listing everything pending:
+- Tags, releases, leaving a -dev version, or any merge that publishes.
+- Force push, or rewriting history that's already pushed.
+- Any other deletion: worktrees, backup refs, files or branches an agent
+  didn't create, commits that exist nowhere else.
+- Committing, moving or discarding StarlightDaemon's uncommitted work.
+- CI workflows, branch protection, repo settings, secrets, agent permission
+  settings, and this section.
+- Anything against live hosts, services or devices.
+
+Stop and report: failing checks you can't fix within the task, conflicts in
+files StarlightDaemon is editing, or anything this section doesn't cover.
+
+### Publication surface
+Merging to `main` publishes nothing: there are no workflows and no install or update path serves files from `main`. Releases go out by tag only.
